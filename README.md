@@ -5,4 +5,4 @@ Esse projeto é uma idealização de uma página de pagamento na qual o usuário
 Utilizei nesse pequeno projeto JavaScript, em combinação com HTML e CSS.
 
 ## Link para visualização do projeto
-[Projeto página de pagamentos](projeto-pag-opcoes.surge.sh)
+[projeto-pag-opcoes.surge.sh]
