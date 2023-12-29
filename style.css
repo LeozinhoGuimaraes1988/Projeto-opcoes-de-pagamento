@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex; /* Ele já está no body porque vai ficar mais fácil para centralizar tudo*/
+  align-items: center; /* Alinhou os itens ao centro*/
+  flex-direction: column;
+  justify-content: center; /* Alinhou os itens no centro com height*/
+  overflow: hidden; /* Para não mostrar as barras de rolagem por padrão*/
+  height: 100vh;
+  margin: 0;
+  background-color: #ebebeb;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  width: 800px;
+  height: 200px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block; /* Com essa propriedade, o botão de login ficou na linha inteira, combinado com o width*/
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.bill,
+.credit-card,
+.pix {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center; /* Isso alinha horizontalmente no centro */
+  align-items: center; /* Isso alinha verticalmente no centro */
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.bill h1,
+.credit-card h1,
+.pix h1 {
+  font-size: 20px;
+}
+
+.credit-card img,
+.bill img,
+.pix img {
+  width: 80px;
+  height: 80px;
+  flex: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.credit-card {
+  margin-right: 20px;
+}
+
+.bill {
+  margin-right: 20px;
+}
+
+.form-control {
+  margin: 20px 40px;
+  width: 700px;
+  height: 50px;
+  padding: 5px;
+  position: relative;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block; /* Com o display block, E-mail e Password ficaram embaixo das linhas*/
+  width: 100%;
+  padding: 12px 0;
+  /* padding-right: 205px; */
+  color: #fff;
+  margin-left: 10px;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0; /* Tira a borda quando selecionamos o E-mail ou Password*/
+  border-bottom-color: rgb(150, 159, 169);
+}
+.form-control label {
+  position: absolute; /* Posição Absoluta para que fique na mesma posição do input */
+  top: 15px;
+  left: 1;
+  margin-left: 10px;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-height: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: rgb(255, 255, 255);
+  transform: translateY(
+    -23px
+  ); /* Essa propriedade é para dar o efeito de subir das letras. Número para baixo é positivo*/
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between; /* Isso cria espaços iguais entre os elementos */
+  margin-left: 50px;
+  position: relative;
+  max-width: 85%;
+}
+
+.card,
+.parcelas,
+.cvc {
+  flex: 1; /* Cada elemento flexível terá a mesma largura */
+  margin-right: 10px; /* Adiciona um espaço entre os elementos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Isso alinha horizontalmente no centro */
+  align-items: center; /* Isso alinha verticalmente no centro */
+  margin-left: 20px;
+  position: relative;
+}
+
+.card input,
+.parcelas input,
+.cvc input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block; /* Com o display block, E-mail e Password ficaram embaixo das linhas*/
+  width: 60%;
+  padding: 12px 0;
+  padding-right: 105px;
+  color: #fff;
+}
+
+.card input:focus,
+.parcelas input:focus,
+.cvc input:focus,
+.card input:valid,
+.parcelas input:valid,
+.cvc input:valid {
+  outline: 0; /* Tira a borda quando selecionamos o E-mail ou Password*/
+  border-bottom-color: rgb(150, 159, 169);
+}
+.card label,
+.parcelas label,
+.cvc label {
+  position: absolute; /* Posição Absoluta para que fique na mesma posição do input */
+  top: 15px;
+  left: 0;
+}
+
+.card label span,
+.parcelas label span,
+.cvc label span {
+  display: inline-block;
+  font-size: 18px;
+  min-height: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.card input:focus + label span,
+.parcelas input:focus + label span,
+.cvc input:focus + label span,
+.card input:valid + label span,
+.parcelas input:valid + label span,
+.cvc input:valid + label span {
+  color: rgb(255, 255, 255);
+  transform: translateY(
+    -20px
+  ); /* Essa propriedade é para dar o efeito de subir das letras. Número para baixo é positivo*/
+}
